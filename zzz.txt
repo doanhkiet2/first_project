@@ -1,0 +1,391 @@
+C:/Users/Admin/.virtualenvs/django_react_project-pide3jZf/Scripts/Activate.ps1
+overload     thực hiện cài đặt các hàm có cùng tên nhưng khác nhau về tập hợp tham số truyền vào
+innovation      sự đổi mới
+actually        thực ra, hiện tại
+dynamically     năng động
+underneath      bên dưới
+feature     đặc tính
+complicated      phức tạp, phức tạp thêm
+generally     nói chung là
+huge advocate     người ủng hộ lớn
+piece    of mẩu
+frankly         thẳng thắn
+definitely       chắc chắn
+fundamentally        về cơ bản
+radical change       thay đổi triệt để
+structure          kết cấu
+obvious change       thay đổi rõ ràng
+aspects right         khía cạnh đúng
+accurate          chính xác
+certainly not         chắc chắn là không rồi
+ballpark         sân bóng
+breeze       gió nhẹ
+breeze through          thông qua
+a bunch         một bó
+detrimental      bất lợi
+a rest of         phần còn lại của
+fluid           dịch, dể dàng
+regardless          bất kể
+actual          thực tế, hiện thời
+initialize        khởi tạo
+purposes           mục đích
+essentially      bản chất
+manual        hướng dẫn sử dụng
+flawed          thiếu sót
+no longer        không còn
+measure         đo lường
+security measure      biện pháp an ninh
+confused         bối rối
+kind of a mouthful       dài dòng
+in other words      nói cách khác
+via         thông qua
+asynchronous       không đồng bộ
+conventional      thông thường
+make sense       có lý
+notation         ký hiệu
+identical       giống hệt nhau
+inferred      suy ra
+majority        số đông
+cumbersome       cồng kềnh
+but instead         nhưng thay vì
+appreciation      sự đánh giá
+incidentally        tình cờ
+associate        liên kết
+attach       đính kèm
+internal      nội bộ
+realistically       thực tế
+accomplished        hoàn thành
+complex         phức tạp
+certainly     chắc chắn
+integrated      tích hợp
+literally       theo nghĩa đen
+typos        lỗi chính tả
+essentially         bản chất
+sort of         loại
+a portion of       một phần của
+therefore        vì thế
+whether         liệu
+whether or not          có hay không
+go off of        đi ra khỏi
+noticed         nhận thấy
+authorized          ủy quyền
+unauthorized         không được phép
+keep in mind         ghi nhớ
+particular       cụ thể
+adjustment       điều chỉnh
+roughly         đại khái
+rough        thô
+prior        trước
+representation       đại diện
+aspect       khía cạnh
+forgery         giả mạo
+cross-site request forgery       Giả mạo yêu cầu giữa các trang web, còn được gọi là tấn công bằng một cú nhấp chuột hoặc cưỡi phiên và viết tắt là CSRF hoặc XSRF, là một loại khai thác độc hại của một trang web nơi các lệnh trái phép được truyền từ người dùng mà ứng dụng web tin tưởng
+granted         được cấp
+concerned        lo âu
+concern         liên quan
+not ideal        không lý tưởng
+breaking changes      phá vỡ những thay đổi
+appropriately     thích hợp
+assert       khẳng định
+technical        kỹ thuật
+permanently         vĩnh viễn
+accurately       chính xác
+otherwise         nếu không thì, mặt khác
+frustrating      bực bội
+consider       xem xét
+Robust      Mạnh mẽ
+relies on        dựa vao
+anxious         lo lắng
+
+React Lifecycle Methods      Phương pháp vòng đời
+internal component state         thiết lập các trạng thái ban đầu bên trong, không được kích hoạt trong lần hiển thị (render) thứ hai
+pure method         không nên thực hiện việc sửa đổi state component trong này
+constructor(props):         Được gọi khi component được khởi tạo. Bạn có thể thiết lập các trạng thái ban đầu bên trong component (initial component state) và ràng buộc các class methods (bind class methods).
+
+componentWillMount():       Được gọi trước phương thức render(). Đó là lý do tại sao nó được sử dụng để thiết lập các trạng thái ban đầu bên trong component (internal component state), bởi vì nó sẽ không được kích hoạt trong lần hiển thị (render) thứ hai. Nói chung, bạn nên sử dụng phương thức constructor() để thiết lập init state cho component
+
+render():       Phương thức này là bắt buộc và trả về các thành phần như một outputs của component. Nó nên là pure method (Có nghĩa bạn không nên thực hiện việc sửa đổi state component trong này). Nó nên nhận vào (get) một inputs và trả lại (return) một outputs, inputs ở đây có thể là props hoặc state, outputs là các element.
+
+componentDidMount():        Chỉ được gọi một lần khi component được gắn kết vào DOM (hiển thị). Vì vậy, đây là thời điểm thích hợp nhất để bạn thực hiện việc giao tiếp với server để lấy dữ liệu từ API. Dữ liệu được tìm và lưu trữ vào state của component để hiển thị trong phương thức render().
+
+componentWillReceiveProps(nextProps):       Phương thức này được gọi trong suốt quá trình component update. Bạn sẽ nhận vào next props, do vậy có thể nhìn thấy được sự khác nhau, thay đổi giữa next props và previous props. Bằng cách sử dụng this.props chúng ta có thể set những behavior khác nhau dựa trên props cũ và props mới. Ngoài ra, bạn có thể thiết lập state dựa trên nextProps.
+
+shouldComponentUpdate(nextProps, nextState):        Phương thức luôn luôn được gọi mỗi khi component được update (do thay đổi state or props). Bạn sẽ sử dụng phương thức này trong việc tối ưu hóa hiệu suất ứng dụng. Tùy thuộc vào giá trị boolean mà bạn trả về từ phương thức này mà component và children của component sẽ hiển thị hoặc không. Bạn có thể ngăn không cho phương thức render() thực thi.
+
+componentWillUpdate(nextProps, nextState):      Phương thức được gọi ngay lập tức trước phương thức render(). Lúc này, chúng ta đã có được next props và next state như mong muốn. Bạn có thể sử dụng phương thức này như là cơ hộ cuối cùng để thực hiện các thiết lập trước khi phương thức render() thực thi.
+
+componentDidUpdate():       Phương thức được gọi lập tức ngay sau phương thức render(). Bạn có thể sử dụng nó để thực hiện các biện pháp nâng cao performance trên DOM hoặc thực hiện các yêu cầu bất đồng bộ (asynchronous requests).
+
+componentWillUnmount():         Được gọi trước khi bạn destroy component (component bị remove khỏi DOM). Bạn có thể sử dụng phương thức này để thực hiện công việc dọn dẹp.
+implement       triển khai thực hiện
+among       ở giữa
+among other reason      trong số những lý do khác
+out of the way      ở 
+imperative      mệnh lệnh
+familiar        Quen biết
+look up to      tìm đến
+eliminating         loại bỏ
+concise         ngắn gọn
+attempting      cố gắng
+progress        phát triển
+seem to be      dường như là
+intercept       đánh chặn
+one step further        tiến thêm một bước
+pass down       truyền lại
+approachable        dễ gần
+throughout          khắp
+relevant        liên quan, thích hợp
+entire      toàn bộ
+kind of     loại
+make sense      có lý
+beside of       bên cạnh
+ensure      đảm bảo
+hook       móc
+nesting     làm tổ
+pass from       chuyển từ
+based off of       dựa trên
+temporary       tạm thời
+the end of      Kết cục của
+infinite loop       vòng lặp vô hạn
+monitor     màn hình
+exclamation mark        dấu chấm than
+further down        tiếp tục xuống
+might consider      có thể xem xét
+have it as      có nó như
+pagination      phân trang
+other than      khác với
+food for thought        kiến đáng được cứu xét, dù không biết nó đúng hay sai.
+adjust      điều chỉnh
+most notable        đáng chú ý nhất
+singular        số ít
+and also        và cũng
+as far as       xa như
+potentially         có tiềm năng
+minor test          kiểm tra nhỏ
+or rather           hay đúng hơn
+a few of        một vài
+these other         những cái khác
+a set of        một tập hợp các
+fairly important        khá quan trọng
+sense       giác quan
+advantage       lợi thế
+in these order      theo thứ tự này
+functionality       chức năng
+eventually      cuối cùng
+argue       tranh luận
+string substitution         thay thế chuỗi
+materialistically           vật chất
+intuition           trực giác
+ the case       trường hợp
+affect          có ảnh hưởng đến
+as to how       như thế nào
+as to           giống như là
+credentials         thông tin đăng nhập
+portion of      một phần của
+cut to come in          cắt để đi vào
+exempt          miễn
+underpass           đường chui
+weird       kỳ dị
+anticipate      dự đoán
+jush see if things are going as paticipated
+explicit        rõ ràng
+accross         vượt qua
+manner          cách thức
+prepending        chuẩn bị
+nonetheless         dù sao
+arbitrarily         tùy tiện
+quite a bit         một chút
+purpose         mục đích
+overall         tổng thể
+straightforward         đơn giản, giản dị
+signals       tín hiệu cuộc gọi
+arbitrary           Bất kỳ
+but rather          nhưng đúng hơn
+out to          ra
+incident        biến cố
+most likely to          nhiều khả năng
+associate           liên kết
+going off of            đi ra khỏi
+a whole         toàn bộ
+substantial         đáng kể
+redundant           dư thừa
+integrated      tích hợp
+complex features            tính năng phức tạp
+efficient           Có hiệu quả
+not incredibly efficient            không hiệu quả cao
+parentheses          dấu ngoặc đơn
+conjunction         kết hợp
+manner          cách thức
+unexpected          không trông chờ mà đến
+potential options           lựa chọn tiềm năng
+intended right          dự định đúng
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+some setting course 12
+- loadtweet in like,unlike
+- seriallize content when retweet
+- const {tweet} = props
+- state database like
+- TOO MANY LOAD
+export function TweetList(props) {
+    const [tweetsInit, setTweetsInit] = useState([])
+    console.log(props.newTweets)
+
+- VONG LAP VO HAN
+export function TweetList(props) {
+    const [tweetsInit, setTweetsInit] = useState([])
+    const [tweets, setTweets] = useState([])
+    // setTweetsInit([...props.newTweets].concat(tweetsInit))
+- TAI SAO PHAI TAO STATE MOI
+export function TweetList(props) {
+    const [tweetsInit, setTweetsInit] = useState([])
+    const [tweets, setTweets] = useState([])
+
+- BẤT ĐỒNG BỘ aaa bbbb cccc dddd
+
+-Tweetparent(function tweetP)
+
+    const [didLookup, setDidLookup]
+
+- USERLINK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function handleDeleteTweet(tweet_id) {
+        const xhr = new XMLHttpRequest()
+        const method = "DETELE" //'GET' 
+        const url = "/api/tweets/" + tweet_id + "/delete"
+        const responseType = "json"
+        xhr.responseType = responseType
+        xhr.open(method, url)
+
+
+        xhr.onload = function () {
+            const serverResponse = xhr.response
+            console.log(serverResponse)
+            const status = serverResponse.status//.response
+
+            if (status === 201) {
+                loadTweets(tweetContainerElement)
+            }
+        }
+        xhr.send()
+    }
