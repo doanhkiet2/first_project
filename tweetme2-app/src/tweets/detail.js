@@ -47,7 +47,7 @@ export function Tweet(props) {
     className = isReTweet === true ? `${className} border rounded` : className
     return <div className={className}>
         {isReTweet === true && <div className='mb-2'>
-            <span class='small text-muted p-2'>Retweet via <UserDisplay user={reTweeter} /></span>
+            <span className='small text-muted p-2'>Retweet via <UserDisplay user={reTweeter} /></span>
         </div>}
         <div className="d-flex">
             <div className="col-1">

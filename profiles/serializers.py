@@ -27,10 +27,10 @@ class PublicProfileSerializer(serializers.ModelSerializer):
         return obj.user.first_name
 
     def get_last_name(self, obj):
-        return obj.user.first_name
+        return obj.user.last_name
 
     def get_username(self, obj):
-        return obj.user.first_name
+        return obj.user.username
 
     def get_following_count(self, obj):
         return obj.user.following.count()
